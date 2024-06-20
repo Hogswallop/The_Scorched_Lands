@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "the_scorched_lands",
+	"version": "${version}",
+	"name": "The Scorched Lands",
+	"description": "adds an new dimension where 1000s of years of blazing inferno have ruined the planet and the great civilisation that once lived there...",
+	"authors": [
+		"Hogswallop"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/the-scorched-lands/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hogswallop.the_scorched_lands.TheScorchedLands"
+		],
+		"client": [
+			"net.hogswallop.the_scorched_lands.TheScorchedLandsClient"
+		],
+		"fabric-datagen": [
+			"net.hogswallop.the_scorched_lands.TheScorchedLandsDataGenerator"
+		]
+	},
+	"mixins": [
+		"the-scorched-lands.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
