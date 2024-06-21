@@ -19,6 +19,8 @@ public class ModBlocks {
             new ScorchedGrassBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block SCORCHED_DIRT = registerBlock("scorched_dirt",
             new ScorchedDirtBlock(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.BROWN).ticksRandomly()));
+    public static final Block SCORCHED_STONE = registerBlock("scorched_stone",
+            new ScorchedBlock(FabricBlockSettings.copyOf(Blocks.STONE).mapColor(MapColor.TERRACOTTA_BROWN)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
