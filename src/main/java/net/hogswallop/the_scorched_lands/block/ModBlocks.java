@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.hogswallop.the_scorched_lands.TheScorchedLands;
 import net.hogswallop.the_scorched_lands.block.custom.ScorchedBlock;
+import net.hogswallop.the_scorched_lands.block.custom.ScorchedDirtBlock;
+import net.hogswallop.the_scorched_lands.block.custom.ScorchedGrassBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,8 +15,10 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block SCORCHED_GRASS = registerBlock("scorched_grass_block",
-            new ScorchedBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block SCORCHED_GRASS_BLOCK = registerBlock("scorched_grass_block",
+            new ScorchedGrassBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block SCORCHED_DIRT = registerBlock("scorched_dirt",
+            new ScorchedDirtBlock(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.BROWN).ticksRandomly()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

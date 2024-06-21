@@ -16,15 +16,11 @@ public class ScorchedBlock extends Block {
     public ScorchedBlock(Settings settings) {
         super(settings);
     }
+
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         entity.damage(world.getDamageSources().onFire(), 1.0f);
         super.onSteppedOn(world, pos, state, entity);
-    }
-
-    @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        BubbleColumnBlock.update(world, pos.up(), state);
     }
 }
 
