@@ -20,6 +20,7 @@ public class ModItemGroups {
                        entries.add(ModBlocks.SCORCHED_GRASS_BLOCK);
                        entries.add(ModBlocks.SCORCHED_DIRT);
                        entries.add(ModBlocks.SCORCHED_STONE);
+                        entries.add(ModBlocks.SCORCHED_LEAVES);
 
                     }).build());
 

@@ -17,7 +17,7 @@ public class ScorchedDirtBlock extends ScorchedBlock {
     private static boolean canSurvive (BlockState state, WorldView world, BlockPos pos) {
         BlockPos abovepos = pos.up();
         BlockState abovestate = world.getBlockState(abovepos);
-        if (abovestate.isTransparent(world, pos) || abovestate.isAir()) {
+        if (abovestate.isTransparent(world, pos) || abovestate.isAir()) { // checks if block above is air or transparent
             return true;
         } else {
             return false;
@@ -26,8 +26,8 @@ public class ScorchedDirtBlock extends ScorchedBlock {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (canSurvive(state, world, pos)) {
-            world.setBlockState(pos, ModBlocks.SCORCHED_GRASS_BLOCK.getDefaultState());
+        if (canSurvive(state, world, pos)) { // if it has air/transparent block above
+            world.setBlockState(pos, ModBlocks.SCORCHED_GRASS_BLOCK.getDefaultState()); // set block to scorched grass
         }
     }
 }

@@ -1,19 +1,14 @@
 package net.hogswallop.the_scorched_lands.block.custom;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.BubbleColumnBlock;
-import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-public class ScorchedBlock extends Block {
+public class ScorchedLeavesBlock extends LeavesBlock {
 
-    public ScorchedBlock(Settings settings) {
+    public ScorchedLeavesBlock(Settings settings) {
         super(settings);
     }
 
@@ -23,4 +18,3 @@ public class ScorchedBlock extends Block {
         super.onSteppedOn(world, pos, state, entity);
     }
 }
-

@@ -6,6 +6,7 @@ import net.hogswallop.the_scorched_lands.TheScorchedLands;
 import net.hogswallop.the_scorched_lands.block.custom.ScorchedBlock;
 import net.hogswallop.the_scorched_lands.block.custom.ScorchedDirtBlock;
 import net.hogswallop.the_scorched_lands.block.custom.ScorchedGrassBlock;
+import net.hogswallop.the_scorched_lands.block.custom.ScorchedLeavesBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -21,6 +22,8 @@ public class ModBlocks {
             new ScorchedDirtBlock(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.BROWN).ticksRandomly()));
     public static final Block SCORCHED_STONE = registerBlock("scorched_stone",
             new ScorchedBlock(FabricBlockSettings.copyOf(Blocks.STONE).mapColor(MapColor.TERRACOTTA_BROWN)));
+    public static final Block SCORCHED_LEAVES = registerBlock("scorched_leaves",
+            new ScorchedLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.ORANGE).luminance(state -> 15)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

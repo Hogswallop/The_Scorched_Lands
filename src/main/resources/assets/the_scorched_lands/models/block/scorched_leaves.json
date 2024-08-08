@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "the_scorched_lands:block/scorched_leaves"
+  }
+}
